@@ -89,7 +89,6 @@ Dokploy utilise le `docker-compose.yml` à la racine du dépôt. Aucune configur
 
 Les données à remplacer avant la mise en production :
 
-- `src/components/Contact.jsx` — adresse réelle, téléphone, email, iframe Google Maps
 - `src/components/Footer.jsx` — liens réseaux sociaux réels
 - `index.html` — balise `<meta name="description">`, favicon
 

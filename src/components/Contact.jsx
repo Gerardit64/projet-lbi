@@ -1,13 +1,11 @@
 import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
 const hours = [
-  { day: 'Lundi', time: 'Fermé' },
-  { day: 'Mardi', time: '9h00 – 19h00' },
-  { day: 'Mercredi', time: '9h00 – 19h00' },
-  { day: 'Jeudi', time: '9h00 – 19h00' },
-  { day: 'Vendredi', time: '9h00 – 19h00' },
-  { day: 'Samedi', time: '9h00 – 18h00' },
-  { day: 'Dimanche', time: 'Fermé' },
+  { day: 'Lundi', time: '9h00 – 18h00' },
+  { day: 'Mardi', time: 'Fermé' },
+  { day: 'Mercredi', time: '9h00 – 18h00' },
+  { day: 'Jeudi', time: '9h00 – 18h00' },
+  { day: 'Vendredi', time: '9h00 – 18h00' },
 ]
 
 export default function Contact() {
@@ -34,11 +32,11 @@ export default function Contact() {
               <div>
                 <h3 className="font-serif text-base text-soft-black mb-1">Adresse</h3>
                 <p className="font-sans text-soft-black/60 text-sm leading-relaxed">
-                  12 rue Gambetta<br />
+                  16 Rue Pierre-Louis Tourasse<br />
                   64500 Saint-Jean-de-Luz
                 </p>
                 <a
-                  href="https://maps.google.com/?q=12+rue+Gambetta+64500+Saint-Jean-de-Luz"
+                  href="https://maps.google.com/?q=16+Rue+Pierre-Louis+Tourasse+64500+Saint-Jean-de-Luz"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-2 font-sans text-xs tracking-widest uppercase text-gold hover:text-gold-dark transition-colors border-b border-gold/40 hover:border-gold-dark"
@@ -56,10 +54,10 @@ export default function Contact() {
               <div>
                 <h3 className="font-serif text-base text-soft-black mb-1">Téléphone</h3>
                 <a
-                  href="tel:+33559000000"
+                  href="tel:+33559546007"
                   className="font-sans text-soft-black/60 text-sm hover:text-gold transition-colors"
                 >
-                  +33 (0)5 59 00 00 00
+                  05 59 54 60 07
                 </a>
               </div>
             </div>
@@ -72,10 +70,10 @@ export default function Contact() {
               <div>
                 <h3 className="font-serif text-base text-soft-black mb-1">Email</h3>
                 <a
-                  href="mailto:contact@lesliebeateinstitut.fr"
+                  href="mailto:contact@leslie-beaute.fr"
                   className="font-sans text-soft-black/60 text-sm hover:text-gold transition-colors"
                 >
-                  contact@lesliebeateinstitut.fr
+                  contact@leslie-beaute.fr
                 </a>
               </div>
             </div>
@@ -110,7 +108,7 @@ export default function Contact() {
                 Réservez votre soin en ligne ou par téléphone. Nous vous répondons dans les 24h.
               </p>
               <a
-                href="tel:+33559000000"
+                href="tel:+33559546007"
                 className="btn-gold inline-block"
               >
                 Appeler pour réserver
@@ -121,7 +119,7 @@ export default function Contact() {
             <div className="flex-1 min-h-[240px] overflow-hidden">
               <iframe
                 title="Localisation Leslie Beauté Institut"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.5!2d-1.6623!3d43.3894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51166e!2sSaint-Jean-de-Luz!5e0!3m2!1sfr!2sfr!4v1"
+                src="https://maps.google.com/maps?q=16+Rue+Pierre-Louis+Tourasse,+64500+Saint-Jean-de-Luz,+France&output=embed"
                 className="w-full h-full"
                 style={{ border: 0, minHeight: '240px' }}
                 allowFullScreen=""

@@ -63,7 +63,6 @@ src/components/
 ## Customisation
 
 Real data to replace before production:
-- `src/components/Contact.jsx` — address, phone, email, Google Maps iframe URL
 - `src/components/Footer.jsx` — real social media links
 - `index.html` — meta description, favicon
 
