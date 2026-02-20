@@ -1,4 +1,3 @@
-import { Instagram, Facebook } from 'lucide-react'
 
 const footerLinks = [
   { href: '#soins', label: 'Soins' },
@@ -25,7 +24,7 @@ export default function Footer() {
               <span className="font-sans text-xs tracking-[0.25em] uppercase text-gold">Beauté Institut</span>
             </div>
             <p className="font-sans text-sm leading-relaxed">
-              12 rue Gambetta<br />
+              16 Rue Pierre-Louis Tourasse<br />
               64500 Saint-Jean-de-Luz
             </p>
           </div>
@@ -48,32 +47,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social + Legal */}
+          {/* Hours */}
           <div>
-            <h4 className="font-sans text-xs tracking-widest uppercase text-white mb-4">Suivez-nous</h4>
-            <div className="flex gap-4 mb-6">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 border border-white/20 flex items-center justify-center hover:border-gold hover:text-gold transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={16} />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 border border-white/20 flex items-center justify-center hover:border-gold hover:text-gold transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={16} />
-              </a>
-            </div>
+            <h4 className="font-sans text-xs tracking-widest uppercase text-white mb-4">Horaires</h4>
             <p className="font-sans text-xs text-white/40">
-              Ouvert du mardi au samedi<br />
-              9h00 – 19h00
+              Lundi, Mercredi – Vendredi<br />
+              9h00 – 18h00
             </p>
           </div>
         </div>
