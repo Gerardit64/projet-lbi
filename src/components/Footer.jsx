@@ -46,10 +46,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Hours */}
+          {/* Booking + Hours */}
           <div>
-            <h4 className="font-sans text-xs tracking-widest uppercase text-white mb-4">Horaires</h4>
-            <p className="font-sans text-xs text-white/40">
+            <h4 className="font-sans text-xs tracking-widest uppercase text-white mb-4">Réservation</h4>
+            <a
+              href="https://www.planity.com/leslie-beaute-institut-64500-saint-jean-de-luz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-sm text-white/70 hover:text-gold transition-colors"
+            >
+              Réserver en ligne via Planity
+            </a>
+            <p className="font-sans text-xs text-white/40 mt-4">
               Lundi, Mercredi – Vendredi<br />
               9h00 – 18h00
             </p>
