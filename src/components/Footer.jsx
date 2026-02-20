@@ -1,4 +1,3 @@
-
 const footerLinks = [
   { href: '#soins', label: 'Soins' },
   { href: '#tarifs', label: 'Tarifs' },
@@ -47,9 +46,24 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Hours */}
+          {/* Social + Hours */}
           <div>
-            <h4 className="font-sans text-xs tracking-widest uppercase text-white mb-4">Horaires</h4>
+            <h4 className="font-sans text-xs tracking-widest uppercase text-white mb-4">Suivez-nous</h4>
+            <div className="flex gap-4 mb-6">
+              <a
+                href="https://www.instagram.com/leslie_beaute_institut/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 border border-white/20 flex items-center justify-center hover:border-gold hover:text-gold transition-colors"
+                aria-label="Instagram"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+              </a>
+            </div>
             <p className="font-sans text-xs text-white/40">
               Lundi, Mercredi – Vendredi<br />
               9h00 – 18h00
