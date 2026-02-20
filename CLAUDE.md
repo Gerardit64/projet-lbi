@@ -11,7 +11,7 @@ Landing page for **Leslie Beauté Institut**, a beauty salon in Saint-Jean-de-Lu
 - **Framework:** Vite + React
 - **Styling:** Tailwind CSS
 - **Icons:** Lucide React or Heroicons
-- **Production:** Nginx (Alpine) served via multi-stage Docker build
+- **Production:** Nginx (Alpine) served via multi-stage build, orchestré par Docker Compose
 
 ## Commands
 
@@ -20,8 +20,8 @@ npm install          # Install dependencies
 npm run dev          # Start development server
 npm run build        # Production build (outputs to dist/)
 npm run preview      # Preview production build locally
-docker build -t lbi .      # Build Docker image
-docker run -p 8080:80 lbi  # Run container locally → http://localhost:8080
+docker compose up --build  # Build and run locally → http://localhost
+docker compose down        # Stop and remove containers
 ```
 
 ## Architecture
@@ -33,7 +33,7 @@ Single-page application with smooth-scroll navigation. All content lives on one 
 - `#institut` — About/presentation section
 - `#contact` — Opening hours, address (Saint-Jean-de-Luz), Google Maps link
 
-**Deployment:** Multi-stage Dockerfile — Stage 1 builds with Node.js (`npm run build`), Stage 2 serves `dist/` with Nginx on port 80. An `nginx.conf` must handle static routes and caching.
+**Deployment:** `docker-compose.yml` auto-suffisant — le Dockerfile multi-stage et la config Nginx sont embarqués en inline (`dockerfile_inline` + `configs.content`). Aucun fichier `Dockerfile` ou `nginx.conf` séparé.
 
 ## Design System
 
@@ -69,4 +69,4 @@ Real data to replace before production:
 
 ## Deployment (Dokploy)
 
-Connect this repo to Dokploy, select **Dockerfile** mode, exposed port `80`. Dokploy builds the Docker image directly from the `Dockerfile` at the repo root.
+Connect this repo to Dokploy, select **Docker Compose** mode. Dokploy utilise le `docker-compose.yml` à la racine du repo. Le build multi-stage et la config Nginx sont entièrement inline dans ce fichier.

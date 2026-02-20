@@ -26,7 +26,7 @@ Page unique avec navigation smooth-scroll :
 - **Vite** + **React 18**
 - **Tailwind CSS v3** — design tokens custom (cream, gold, soft-black)
 - **Lucide React** — icônes
-- **Nginx Alpine** — serveur de production (multi-stage Docker build)
+- **Nginx Alpine** — serveur de production via **Docker Compose** (build multi-stage inline)
 
 ### Design system
 
@@ -54,19 +54,23 @@ npm run preview   # Prévisualiser le build
 ## Docker
 
 ```bash
-# Build
-docker build -t lbi .
+# Build et démarrage (foreground)
+docker compose up --build
 
-# Run local (port 8080)
-docker run -p 8080:80 lbi
+# Build et démarrage (arrière-plan)
+docker compose up --build -d
 
 # Test
-open http://localhost:8080
+open http://localhost
+
+# Arrêt
+docker compose down
 ```
 
-Le Dockerfile utilise un **multi-stage build** :
+Le `docker-compose.yml` est **auto-suffisant** — le build multi-stage et la config Nginx sont embarqués en inline :
 1. **Stage builder** — Node 20 Alpine, `npm ci` + `vite build`
 2. **Stage final** — Nginx Alpine, sert `dist/` sur le port 80
+3. **Config Nginx** — gzip, SPA routing, cache assets, security headers (inline via `configs.content`)
 
 ---
 
@@ -74,11 +78,10 @@ Le Dockerfile utilise un **multi-stage build** :
 
 1. Créer une nouvelle application dans Dokploy
 2. Connecter ce dépôt GitHub
-3. Sélectionner le mode **Dockerfile**
-4. Port exposé : `80`
-5. Déclencher le déploiement
+3. Sélectionner le mode **Docker Compose**
+4. Déclencher le déploiement
 
-Dokploy build l'image Docker directement depuis le `Dockerfile` à la racine du dépôt.
+Dokploy utilise le `docker-compose.yml` à la racine du dépôt. Aucune configuration supplémentaire requise.
 
 ---
 
@@ -95,8 +98,7 @@ Les données à remplacer avant la mise en production :
 ## Structure du projet
 
 ```
-├── Dockerfile
-├── nginx.conf
+├── docker-compose.yml
 ├── index.html
 ├── vite.config.js
 ├── tailwind.config.js
