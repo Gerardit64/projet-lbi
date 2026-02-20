@@ -15,7 +15,7 @@ services:
         EXPOSE 80
         CMD ["nginx", "-g", "daemon off;"]
     ports:
-      - "80:80"
+      - "8095:80"
     restart: unless-stopped
     configs:
       - source: nginx_config

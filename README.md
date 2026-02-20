@@ -61,7 +61,7 @@ docker compose up --build
 docker compose up --build -d
 
 # Test
-open http://localhost
+open http://localhost:8095
 
 # Arrêt
 docker compose down

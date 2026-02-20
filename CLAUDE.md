@@ -20,7 +20,7 @@ npm install          # Install dependencies
 npm run dev          # Start development server
 npm run build        # Production build (outputs to dist/)
 npm run preview      # Preview production build locally
-docker compose up --build  # Build and run locally → http://localhost
+docker compose up --build  # Build and run locally → http://localhost:8095
 docker compose down        # Stop and remove containers
 ```
 
