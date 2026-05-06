@@ -39,6 +39,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /lbiproto.sc1coja1420.universe.wf/
+          dangerous-clean-slate: true
 
   deploy-prod:
     needs: build
