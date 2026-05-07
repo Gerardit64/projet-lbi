@@ -19,6 +19,18 @@
 - **Racine FTP du compte utilisé :** `/home/sc1coja1420/lbiproto.sc1coja1420.universe.wf/lbi/`
 - **server-dir dans le workflow :** `/public_html/`
 
+### Structure du sous-domaine sur le serveur
+
+```
+lbiproto.sc1coja1420.universe.wf/
+├── index.html          ← ancienne page (ignorée par Apache)
+└── lbi/
+    ├── .ftpquota       ← racine FTP
+    └── public_html/    ← racine document cPanel (ce qu'Apache sert)
+        ├── index.html  ← notre React app
+        └── assets/
+```
+
 > ⚠️ La racine FTP est dans `lbi/` et non à la racine du sous-domaine. La racine du document dans cPanel doit pointer vers `lbi/public_html` — ne pas modifier cette configuration.
 
 ---
